@@ -25,7 +25,9 @@
 \usepackage{floatrow}
 \usepackage{lscape}
 \usepackage{amsmath}
-\usepackage{listings}
+\usepackage{url}
+
+\setlength{\dimen\footins}{5cm}
 
 \renewcommand\appendixtocname{Dodaci}
 
@@ -79,10 +81,6 @@
 \newcommand{\nocontentsline}[3]{}
 \newcommand{\tocless}[2]{\bgroup\let\addcontentsline=\nocontentsline#1{#2}\egroup}
 
-\lstset{basicstyle=\ttfamily\scriptsize, breaklines=true, extendedchars=false,
-    inputencoding=utf8, escapeinside={\%*}{*|},
-    commentstyle=\ttfamily\scriptsize, showspaces=false, showstringspaces=false}
-
 \begin{document}
 \begin{titlepage}
     \begin{center}
@@ -115,8 +113,8 @@ sudionika, većinom studenata. Sudionici su rješavali Buss-Perry upitnik
 agresivnosti (BPAQ) i test implicitnih asocijacija za agresivnost (IAT-A) te
 sudjelovali u Igri kukavice, Dilemi zatvorenika i Igri vođe. Rečeno im je da
 igraju protiv anonimnog suigrača, kojeg u stvari nije bilo, nego su igrali
-protiv računala s unaprijed određenim strategijama (surađuje u sve tri igre ili u
-nijednoj). Očekivali smo da će na temelju korištenih mjera, njihove međusobne
+protiv računala s unaprijed određenim strategijama (surađuje u sve tri igre ili
+ni u jednoj). Očekivali smo da će na temelju korištenih mjera, njihove međusobne
 interakcije te interakcije s ponašanjem suigrača biti moguće predvidjeti
 donošenje nekooperativnih odluka u eksperimentalnim igrama. Same mjere i njihova
 dvostruka interakcija te dvostruka interakcija s ponašanjem suigrača nisu bili
@@ -131,6 +129,8 @@ agresivnosti u eksperimentalnim igrama.
 
 \noindent Ključne riječi: test implicitnih asocijacija, agresivnost, 
 bihevioralna teorija igara, Igra kukavice, Igra vođe, Dilema zatvorenika, provokacija.
+
+\vspace*{\fill}
 
 \tocless\section{Summary}
 
@@ -152,7 +152,7 @@ behavior were predictive of defecting choices in the Prisoner's Dilemma and the
 third game in the series, respectively. Although the conclusions of this study
 should be taken with caution due to the methodological limitations, we believe
 they can be an useful guidance for future research, especially because of the
-relatively low number of research dealing with the role of aggression in
+relatively low number of studies dealing with the role of aggression in
 experimental games.
 \bigskip
 
@@ -244,12 +244,12 @@ njihovi stavovi, nego donose odluke koje mogu imati stvarne posljedice za njih
 same, ali i za druge \citep{worldexgame}. Ipak, eksperimentalne igre imaju i
 neke nedostatke.
 Jedan od najvećih problema vezanih uz eksperimentalne igre kao kriterijske mjere
-u psihološkim istraživanjima je višeznačnost donesenih odluka.
+u psihologijskim istraživanjima je višeznačnost donesenih odluka.
 Primjerice, nesuradnja u Dilemi
 zatvorenika može ukazivati na pohlepu, averziju prema gubicima ili defenzivnost
 \citep{worldexgame, colgt}. Ipak, budući da je ponašanje ljudi u stvarnim
 situacijama multifaktorski određeno, ovaj \enquote{nedostatak} može doprinijeti povećanju
-ekološke valjanosti mjera.
+ekološke valjanosti igara.
 
 Dilema zatvorenika jedna je od najpoznatijih i najčešće istraživanih
 eksperimentalnih igara \citep{colgt,
@@ -273,7 +273,7 @@ druge strane, ako pojedinac ne surađuje, onda će, (a) u slučaju da njegov sui
 surađuje, postići najbolji mogući ishod, a (b) ako suigrač ne surađuje, zatvorska
 kazna koju će pojedinac dobiti neće biti maksimalna. Stoga, nesuradnja je
 strategija koja maksimizira najmanju moguću dobit, što je čini strategijom koju
-bi trebao odabrati svaki racionalni igrač. 
+bi trebao odabrati svaki racionalan igrač. 
 Rezultati istraživanja,
 pak, pokazuju da je postotak suradničkih odluka viši od očekivanog \citep{colgt,
     worldexgame, jones2008smarter, shafir1992thinking}.
@@ -321,7 +321,7 @@ agresivnost te ističu važnost tog smjera istraživanja.
 \enquote{psihološko stanje koje proizlazi iz namjere da se prihvati ranjivost
     na temelju pozitivnih očekivanja o namjerama ili ponašanjima drugih}
 \citep*[str. 395]{rousseau1998not}.
-\citet{20yexg} navode da je za suradnju važno očekivanje da će druga
+\citet{20yexg} smatraju da je za suradnju važno očekivanje da će druga
 strana surađivati jer se osoba u protivnom izlaže opasnosti od izrabljivanja.
 Pokazalo se da osobe koje ne vjeruju drugima nisu nužno nekooperativne, ali
 su sklone vjerovati da drugi neće surađivati, što umanjuje njihovu spremnost na
@@ -432,7 +432,8 @@ vremena reakcije na
 [ja ili opasno / drugi ili bezopasno] i [ja ili bezopasno / drugi ili opasno]
 \citep{richetin2008automatic}, pri čemu bi pojedinci koji sebe snažnije asociraju s
 \emph{opasnim} nego s \emph{bezopasnim} trebali brže kategorizirati podražaje u
-prvom zadatku nego u drugom.
+prvom zadatku nego u drugom. Primjer IAT-a za agresivnost prikazan je na slici
+\ref{iatapic}.
 
 \begin{figure}
     \centering
@@ -448,7 +449,7 @@ prvom zadatku nego u drugom.
         \caption{}
         \end{subfigure}
         \vspace*{-0.6cm}
-    \caption{Primjer zadataka kategorizacije u implicitnom testu asocijacija za
+        \caption{\label{iatapic} Primjer zadataka kategorizacije u implicitnom testu asocijacija za
     agresivnost.}
 \end{figure}
 
@@ -471,7 +472,7 @@ rješavali IAT-e za direktnu i indirektnu agresivnost, nakon čega su trebali
 pozvati eksperimentatora. On se ponašao ili bezobrazno (provokacija) ili
 neutralno. Nakon te interakcije, drugi je eksperimentator zamolio sudionike da
 evaluiraju prvog, uz objašnjenje da moraju odabrati asistente koji će zadržati
-svoj posao sljedeći semestar. Kao mjera agresivnog ponašanja uzete su evaluacije
+svoj posao tijekom sljedećeg semestra. Kao mjera agresivnog ponašanja uzete su evaluacije
 prvog eksperimentatora, pri čemu se negativnije evaluacije uzimaju kao indikator
 viših razina agresivnosti. Nakon evaluacija, sudionici su ispunili i
 eksplicitne mjere direktne i indirektne agresivnosti. Obrada je pokazala da su
@@ -656,8 +657,7 @@ Ukupan rezultat na IAT-u računa se kao \emph{D}-indeks ---
 razlika između prosječnih vremena reakcije u kompatibilnim i nekompatibilnim
 blokovima, podijeljena sa zajedničkom standardnom devijacijom.
 Teoretski raspon rezultata kreće se od -2 do +2, pri čemu viši iznosi ukazuju na
-izraženije povezivanje pojma o sebi s agresivnosti
-\citep{parmavc2015usporedba}.
+izraženije povezivanje pojma o sebi s agresivnosti.
 
 \emph{Buss-Perry upitnik agresivnosti (BPAQ; \citealp{buss1992aggression})}  sastoji se od
 29 čestica na koje se odgovara na skali Likertovog tipa s rasponom vrijednosti
@@ -676,7 +676,7 @@ upitnika grupiraju se u četiri faktora: fizičku agresivnost
     ne skrivam svoju iznerviranost.}) i
 hostilnost (BPAQ-H; npr. \enquote{Ponekad me izjeda
     ljubomora.}). Ukupan rezultat izražen je kao
-prosječna vrijednost odgovora na sve čestice te se, stoga, kreće u rasponu od 1
+prosječna vrijednost odgovorenih pitanja te se, stoga, kreće u rasponu od 1
 do 7, pri čemu više vrijednosti ukazuju na snažniju razvijenost konstrukata.
 Pouzdanost cijelog testa
 računata kao Cronbachov {\textalpha} iznosi 0.89 [0.86--0.92].
@@ -691,8 +691,8 @@ brojke u za to namijenjeno polje.
 
 Scenarij Dileme zatvorenika ukratko je opisan u Uvodu te ga ovdje neću
 ponavljati. U Igri kukavice, radi se o dva auta koji jure jedan prema drugome.
-Sudionik je trebao odabrati hoće li nastaviti voziti ravno i riskirati sudar ili
-skrenuti, ali potencijalno biti prozvan kukavicom. Igra vođe je opis situacije
+Sudionici su trebali odabrati hoće li nastaviti voziti ravno i riskirati sudar ili
+skrenuti, ali potencijalno biti prozvani kukavicom. Igra vođe je opis situacije
 u prometu --- dva auta žele se priključiti na glavnu prometnicu na kojoj se
 otvorilo mjesto za samo jedno vozilo. Ako krenu
 istovremeno, sudarit će se, ali ako nijedan ne  krene, obojica će ostati stajati
@@ -775,6 +775,9 @@ istraživanja.
 
 \section{Rezultati}
 
+\texttt{R} kod za prikazane obrade, ali i za neke od kojih smo odustali,
+dostupan je na \url{https://github.com/vdeni/dip/blob/master/obrada/dipobrada.R}.
+
 \subsection{Deskriptivna statistika i provjera obmane} 
 
 Kako bi se provjerila uspješnost obmane sudionika, njihovi odgovori na upitnik
@@ -818,7 +821,7 @@ prosječne vrijednosti skale (3.5).
 Distribucije rezultata na obje su mjere pozitivno
 asimetrične, što znači da je agresivnih sudionika bilo manje od neagresivnih.
 
-\begin{table}[h]
+\begin{table}
     \caption{Postotak nekooperativnih odluka u igrama korištenima u istraživanju. (N =
         102)\label{deskr krit}}
     \centering
@@ -856,7 +859,7 @@ niti s pojedinim faktorima BPAQ.
 Bivarijatne korelacije odluka u igrama računate
 kao fi-koeficijent nisu značajne.
 
-\subsection{Agresivnost kao prediktor odluka u eksperimantalnim igrama}
+\subsection{Agresivnost kao prediktor odluka u eksperimentalnim igrama}
 
 U svim analizama, kako bismo kompenzirali za potencijalno nisku statističku
 snagu, odlučili smo pratiti savjet koji daje 
@@ -880,7 +883,7 @@ Zaključujemo da Hipoteza 1a nije potvrđena. BPAQ\textsubscript{ukupno} pokazao
 samo za donošenje odluka u Igri vođe, ali ta povezanost je suprotnog smjera od
 očekivanog.
 
-\begin{table}[h!]
+\begin{table}
     \begin{center}
         \caption{\label{bivargameks} Logističke regresijske analize s
             BPAQ\textsubscript{ukupno} kao prediktorom nekooperativnih odluka u
@@ -910,7 +913,7 @@ Tablici \ref{bivargamimp}. Hipoteza 1b također nije potvrđena. Rezultat na IAT
 nije se pokazao prediktivnim za donošenje nekooperativnih odluka u korištenim
 eksperimentalnim igrama.
 
-\begin{table}[b]
+\begin{table}
     \begin{center}
         \caption{\label{bivargamimp} Logističke regresijske analize s
             IAT-A kao prediktorom nekooperativnih odluka u
@@ -940,7 +943,7 @@ prediktivnom za donošenje nekooperativnih odluka u eksperimentalnim igrama (za
 IK: $B =$ 0.052, $p =$ 0.968; za DZ: $B =$ -1.244, $p =$ 0.25; za IV: $B =$
 0.530, $p =$ 0.58). Detalji analiza prikazani su u tablici \ref{intgam}.
 
-\begin{table}[h]
+\begin{table}
     \begin{center}
         \caption{\label{intgam} Sažetak modela višestruke logističke regresije s
             IAT-A i BPAQ\textsubscript{ukupno} kao prediktorima donošenja
@@ -1005,24 +1008,24 @@ suigrača, $B =$ -0.299, $p =$ 0.63). Sažeci modela prikazani su u Tablicama
             nekooperativne odluke u drugoj igri po redu. Za puni
             model: $\chi^2 =$
             3.282, $df =$ 6, $p =$ 0.12, $N =$ 102.}
-        \hspace*{-0.5cm}\begin{tabular}{llrrrr}
+        \hspace*{-0.5cm}\begin{tabular}{llrrr}
         \toprule
-        Model & Prediktor & $B$ & $SE$ & $z$ & OR (95\% CI)\\
+        Model & Prediktor & $B$ & $SE$ & $z$\\
         \midrule
-        I & konstanta* & -1.419 & 0.359 & -3.954 &\\
+        I & konstanta* & -1.419 & 0.359 & -3.954 \\
         \multirow{3}{*}{$R^2_N =$ 0.03}
-        &BPAQ\textsubscript{ukupno} & -0.138 & 0.286 & -0.483 &\\
-        &IAT-A & 0.353 & 0.699 & 0.505 &\\
-        &botdec & 0.627 & 0.472 & 1.328 & \\
-        &&&&&\\ 
-        II & konstanta* & -1.407 & 0.364 & -3.862 & \\
+        &BPAQ\textsubscript{ukupno} & -0.138 & 0.286 & -0.483 \\
+        &IAT-A & 0.353 & 0.699 & 0.505 \\
+        &botdec & 0.627 & 0.472 & 1.328 \\
+        &&&&\\ 
+        II & konstanta* & -1.407 & 0.364 & -3.862 \\
         \multirow{6}{*}{$R^2_N =$ 0.04}
-        &BPAQ\textsubscript{ukupno} & 0.099 & 0.459 & 0.217 & \\
-        &IAT-A & 0.421 & 1.004 & 0.420 &\\
-        &botdec & 0.601 & 0.478 & 1.257  & \\
-        &IAT-A x botdec & -0.191 & 1.439 & -0.133 & \\
-        &BPAQ\textsubscript{ukupno} x botdec & -0.407 & 0.608 & -0.670 & \\
-        &BPAQ\textsubscript{ukupno} x IAT-A & -0.209 & 1.061 & -0.197 & \\
+        &BPAQ\textsubscript{ukupno} & 0.099 & 0.459 & 0.217 \\
+        &IAT-A & 0.421 & 1.004 & 0.420 \\
+        &botdec & 0.601 & 0.478 & 1.257  \\
+        &IAT-A x botdec & -0.191 & 1.439 & -0.133 \\
+        &BPAQ\textsubscript{ukupno} x botdec & -0.407 & 0.608 & -0.670 \\
+        &BPAQ\textsubscript{ukupno} x IAT-A & -0.209 & 1.061 & -0.197 \\
         \bottomrule
         \multicolumn{5}{l}{
             \parbox{3cm}{\scriptsize \vspace{3pt} 
@@ -1084,7 +1087,8 @@ zadnjoj igri. Za primjer, možemo pogledati Igru kukavice --- kad je IK bila prv
 po redu, tek 3.1\% sudionika donijelo je nekooperativnu odluku. Kad je bila
 druga ili treća, 17.9\% odnosno 19.0\% sudionika donijelo je nekooperativnu
 odluku. Stoga, smatramo da je valjano razmotriti i položaj igre kao
-potencijalni faktor. 
+potencijalni faktor. Sve tablice i slike vezane uz dodatne analize nalaze se u
+Dodacima. 
 
 Drugo, odlučili smo provjeriti je li trostruka interakcija
 IAT-A, BPAQ\textsubscript{ukupno} i ponašanja suigrača prediktivna za donošenje
@@ -1135,7 +1139,7 @@ koeficijentima kad se neke jedinice analize izbrišu
 \citep{salkind2007encyclopedia}. Kako bismo to provjerili, ponovili smo istu
 regresijsku analizu 1000 puta, svaki put iz analize nasumično isključujući 10
 sudionika. Deskriptivni podaci za provedene analize nalaze se u Tablici
-\ref{deskr p robust}. Kao što možemo vidjeti, prosječna vrijednost procjenjenog
+\ref{deskr p robust}. Kao što možemo vidjeti, prosječna vrijednost procijenjenog
 koeficijenta trostruke interakcije iznosi -3.88, a njegova standarda devijacija
 0.76. Osim toga, u 83.5\% replikacija interakcija je postigla razinu
 značajnosti od 0.06 ili niže. Smatramo da ova analiza ukazuje na to da su
@@ -1144,99 +1148,6 @@ protiv postojanja multikolinearnosti.
 Ipak, još jedan moguć
 indikator postojanja multikolinearnosti je i predznak koeficijenta suprotan od teoretski
 očekivanog \citep{salkind2007encyclopedia}, što je svakako slučaj za ovu trostruku interakciju.
-
-\begin{table}
-    \begin{center}
-        \caption{\label{glmtotposP} Model logističke regresije s trostrukom interakcijom IAT-A,
-            BPAQ\textsubscript{ukupno} i položajem Dileme zatvorenika u slijedu
-            igara kao prediktorom
-            nekooperativne odluke u Dilemi zatvorenika. 
-            Za puni model: $\chi^2 =$ 9.274, $df =$ 7, $p =$ 0.23, $N
-            =$ 102.}
-        \hspace*{-0.7cm}\begin{tabular}{llrrrr}
-        \toprule
-        Model & Prediktor & $B$ & $SE$ & $z$ & OR (95\% CI)\\
-        \midrule
-        I & konstanta* & -1.923 & 0.690 & -2.787 &\\
-        \multirow{3}{*}{$R^2_N =$ 0.02}
-        &BPAQ\textsubscript{ukupno} & -0.066 & 0.296 & -0.221 &\\
-        &IAT-A & -0.118 & 0.723 & 0.163 &\\
-        &gameposP & 0.346 & 0.318 & 1.090  &\\
-        &&&&&\\ 
-        II & konstanta & -1.912 & 0.710 & -2.693 &\\
-        \multirow{6}{*}{$R^2_N =$ 0.05}
-        &BPAQ\textsubscript{ukupno} & 0.652 & 0.858 & 0.760 &\\
-        &IAT-A & 0.652 & 2.118 & 0.308 &\\
-        &gameposP & 0.303 & 0.329 & 0.922 &\\
-        &BPAQ\textsubscript{ukupno} x IAT-A & -1.258 & 1.109 & -1.135 &\\
-        &BPAQ\textsubscript{ukupno} x gameposP & -0.376 & 0.402 & -0.935 &\\
-        &gameposP x IAT-A & -0.244 & 0.999 & -0.244 &\\
-        &&&&&\\ 
-        III & konstanta & -1.901 & 0.749 & -2.538 &\\
-        \multirow{7}{*}{$R^2_N =$ 0.13}
-        &BPAQ\textsubscript{ukupno} & 0.636 & 0.872 & 0.729 & \\
-        &IAT-A & -0.296 & 2.320 & -0.128 &\\
-        &gameposP & 0.211 & 0.364 & 0.579  &\\
-        &BPAQ\textsubscript{ukupno} x IAT-A$^\ddagger$ & 5.799 & 3.198 & 1.813 &
-        329.83 (0.751, 2.5 x 10\textsuperscript{5})\\
-        &BPAQ\textsubscript{ukupno} x gameposP & -0.448 & 0.422 & -1.062 &\\
-        &gameposP x IAT-A & 0.087 & 1.156 & 0.075 &\\
-        & BPAQ\textsubscript{ukupno} x IAT-A x gameposP* & -3.815 &
-        1.679 & -2.272 & 0.022 (0.001, 0.485)\\
-        \bottomrule
-        \multicolumn{6}{l}{
-            \parbox{9cm}{\scriptsize \vspace{3pt} 
-                * p < 0.05\\
-                $\ddagger$ p < 0.07\\
-                gameposP = položaj Dileme zatvorenika u slijedu igara
-        }}
-    \end{tabular}
-\end{center}
-\end{table}
-
-\begin{figure}
-    \begin{center}
-        \caption{\label{glmtotposPplot} Prikaz trostruke interakcije IAT-A,
-            BPAQ\textsubscript{ukupno} i položaja igre kao prediktora
-            nekooperativnog ponašanja u Dilemi zatvorenika. Kontinuirane
-            varijable centrirane su na nulu (N = 102).}
-        \includegraphics[keepaspectratio, width =
-        \textwidth]{"/home/denis/Documents/Diplomski/diplomska radnja/diplomski.tex/glmagtotposp"}
-    \end{center}
-\end{figure}
-
-\begin{table}
-    \begin{center}
-        \caption{\label{deskr p robust} Deskriptivni podaci replikacije punog
-            modela s IAT-A, BPAQ\textsubscript{ukupno} i položajem Dileme
-            zatvorenika kao prediktorima nekooperativnih odluka u Dilemi
-            zatvorenika ($k =$ 1000).}
-        \hspace*{-0.8cm}\begin{tabular}{lrrrrrrr}
-        \toprule
-        Prediktor & $M_B$ & $SD_B$ & $med_B$ & $IQR_B$ & $M_{SE}$ & $med_{SE}$
-        & $\% p < 0.06$\\
-        \midrule
-        BPAQ\textsubscript{ukupno}$^\ddagger$ & 3.15 & 0.78 & 3.08 & 2.81 -- 3.43 &
-        1.77 & 1.71 & 40.7\\
-       IAT-A & -0.33 & 0.71 & -0.32 & -0.75 -- 0.07 & 2.50 & 2.47 & 0.0\\
-       gameposP & 0.26 & 0.20 & 0.25 & 0.14 -- 0.36 & 0.72 & 0.70 & 0.0\\
-       BPAQ\textsubscript{ukupno} x IAT-A$^\ddagger$ & 5.92 & 1.33 & 5.76 & 5.21 -- 6.52 &
-        3.46 & 3.38 & 27.1\\
-        BPAQ\textsubscript{ukupno} x gameposP* & -2.10 & 0.46 & -2.02 &
-        -2.20 -- {-}1.88 & 0.96 & 0.92 & 89.2\\
-       gameposP x IAT-A & 0.13 & 0.36 & 0.12 & -0.10 -- 0.31 & 1.25 & 1.22 & 0.0\\
-       BPAQ\textsubscript{ukupno} x IAT-A x gameposP* & -3.88 & 0.76 & -3.76 &
-        -4.15 -- {-}3.45 & 1.82 & 1.77 & 83.5\\
-        \bottomrule
-        \multicolumn{6}{l}{
-            \parbox{9cm}{\scriptsize \vspace{3pt} 
-                * p < 0.05\\
-                $\ddagger$ p < 0.07\\
-                gameposP = položaj Dileme zatvorenika u slijedu igara
-        }}
-    \end{tabular}
-\end{center}
-\end{table}
 
 \paragraph{Interakcija IAT-A, BPAQ\textsubscript{ukupno} i odluke suigrača} 
 Model se nije pokazao prediktivnim za donošenje nekooperativnih odluka u drugoj
@@ -1265,86 +1176,6 @@ značajnost dosegla tek u 38\% replikacija, čak i uz smanjenu strogost. Uz
 dodatno ublažavanje kriterija značajnosti na 0.1, i dalje je samo 59.4\%
 repliciranih interakcija bilo značajno. 
 
-\begin{table}
-    \begin{center}
-        \caption{\label{glmtotgam3} Model logističke regresije s trostrukom interakcijom IAT-A,
-            BPAQ\textsubscript{ukupno} i ponašanja suigrača kao prediktorom
-            nekooperativne odluke u trećoj igri po redu. Prikazan je samo posljednji korak
-            jer su raniji koraci prikazani u Tablici \ref{glmtotgam33}. Za puni
-            model: $\chi^2 =$
-            11.535, $df =$ 7, $p =$ 0.12, $N =$ 102.}
-        \hspace*{-0.5cm}\begin{tabular}{llrrrr}
-        \toprule
-        Model & Prediktor & $B$ & $SE$ & $z$ & OR (95\% CI)\\
-        \midrule
-        III & konstanta* & -1.569 & 0.426 & -3.687 &\\
-        \multirow{7}{*}{$R^2_N =$ 0.15}
-        &BPAQ\textsubscript{ukupno} & -0.091 & 0.512 & -0.179 & \\
-        &IAT-A & -0.622 & 1.387 & -0.448 &\\
-        &botdec* & 1.101 & 0.518 & 2.128 & 3.006 (1.144, 9.083)\\
-        &BPAQ\textsubscript{ukupno} x IAT-A* & -5.371 & 2.512 & -2.138 & 0.005
-        (1.42 x 10\textsuperscript{-5}, 0.370) \\
-        &BPAQ\textsubscript{ukupno} x botdec & -0.252 & 0.632 & -0.398 &\\
-        &botdec x IAT-A & 0.707 & 1.703 & 0.415 &\\
-        & BPAQ\textsubscript{ukupno} x IAT-A x botdec$^\ddagger$ & 5.112 & 2.804
-        & 1.823 & 165.94 (1.019, 8328.1) \\
-        \bottomrule
-        \multicolumn{5}{l}{
-            \parbox{3cm}{\scriptsize \vspace{3pt} 
-                * p < 0.05\\
-                $\ddagger$  p < 0.07\\
-                botdec = odluka suigrača
-        }}
-    \end{tabular}
-\end{center}
-\end{table}
-
-\begin{figure}[h]
-    \begin{center}
-        \caption{\label{glmtotgam3plot} Prikaz trostruke interakcije IAT-A,
-            BPAQ\textsubscript{ukupno} i ponašanja suigrača kao prediktora
-            nekooperativnog ponašanja u trećoj igri po redu. Kontinuirane
-            varijable centrirane su na nulu (N = 102).}
-        \includegraphics[keepaspectratio, width =
-        \textwidth]{"/home/denis/Documents/Diplomski/diplomska
-            radnja/diplomski.tex/glmtot3"}
-    \end{center}
-\end{figure}
-
-\begin{table}
-    \begin{center}
-        \caption{\label{deskr gam3 robust} Deskriptivni podaci replikacije punog
-            modela s IAT-A, BPAQ\textsubscript{ukupno} i ponašanjem suigrača u
-            prethodnim igrama kao prediktorima nekooperativnih odluka u trećoj 
-            igri po redu ($k =$ 1000).}
-        \hspace*{-0.8cm}\begin{tabular}{lrrrrrrr}
-        \toprule
-        Prediktor & $M_B$ & $SD_B$ & $med_B$ & $IQR_B$ & $M_{SE}$ & $med_{SE}$
-        & $\% p < 0.07$\\
-        \midrule
-        BPAQ\textsubscript{ukupno}* & -2.61 & 1.18 & -2.26 & -2.52 -- -2.08 &
-        1.34 & 1.20 & 65.9\\
-       IAT-A & -0.81 & 1.32 & -0.53 & -0.77 -- -0.22& 1.54 & 1.41 & 02.1\\
-       botdec & 1.56 & 0.89 & 1.33 & 1.13 -- 1.55 & 1.06 & 0.97 & 12.3\\
-       BPAQ\textsubscript{ukupno} x IAT-A* & -5.77 & 2.30 & -5.16 & -5.85 --
-       -4.74& 2.84 & 2.60 & 65.9\\
-       BPAQ\textsubscript{ukupno} x botdec & 2.13 & 1.25 & 1.86 &
-        1.57 -- 2.22 & 1.57 & 1.44 & 10.3\\
-       botdec x IAT-A & 0.90 & 1.40 & 0.57 & 0.19 -- 1.05& 1.89 & 1.78 & 01.7\\
-       BPAQ\textsubscript{ukupno} x IAT-A x botdec$^\ddagger$ & 5.48 & 2.39 & 4.94 &
-        4.32 -- 5.82& 3.16 & 2.94 & 38.0\\
-        \bottomrule
-        \multicolumn{5}{l}{
-            \parbox{3cm}{\scriptsize \vspace{3pt} 
-                * p < 0.05\\
-                $\ddagger$  p < 0.07\\
-                botdec = odluka suigrača
-        }}
-    \end{tabular}
-\end{center}
-\end{table}
-
-
 \section{Rasprava}
 
 \subsection{Deskriptivna statistika i odnosi među prediktorima}
@@ -1352,14 +1183,14 @@ repliciranih interakcija bilo značajno.
 Pouzdanost IAT-A je zadovoljavajuća i u skladu s prijašnjim nalazima 
 (0.91 i 0.89 u \citealp{richetin2010predictive}; 0.80 u
 \citealp{banse2015predicting}).
-IAT-A ne korelira niti s ukupnim rezultatom na BPAQ. 
+IAT-A ne korelira s ukupnim rezultatom na BPAQ. 
 Neznačajna korelacija IAT-A s pretpostavljenom odgovarajućom eksplicitnom mjerom
 u skladu je s prijašnjim nalazima --- npr. \citet{banse2015predicting}
 navode da je korelacija dvije verzije IAT-A i eksplicitne mjere agresivnosti na
 jednom uzorku bila 0.36 odnosno 0.48, dok je korelacija istih mjera u drugom
 uzorku bila neznačajna. \citet{richetin2010predictive} također nisu
 pronašle značajne korelacije IAT-A i eksplicitnih mjera.
-Općenito, niske korelacije  implicitnih i eksplicitnih mjera su uobičajene
+Općenito, niske korelacije  implicitnih i eksplicitnih mjera uobičajene su 
 \citep{uhlmann2012getting, mcclelland1989self}.
 
 Što se tiče učestalosti nekooperativnih odluka, nismo naišli na podatke za
@@ -1386,27 +1217,30 @@ Razlog za takav obrazac povezanosti nije očit.
 
 Sama implicitna mjera agresivnosti nije se pokazala prediktivnom za donošenje
 nekooperativnih odluka, što također nije u skladu s očekivanjima (H1b).
-Dvostruka interakcija IAT-A i BPAQ\textsubscript{ukupno} također se
-nije pokazala prediktivnom za donošenje nekooperativnih odluka u
-eksperimentalnim igrama (H1c).
+Implicitna mjera nije pokazala inkrementalnu valjanost u objašnjavanju
+kriterija, što je suprotno našim očekivanjima (H1c).
+Osim toga, ni dvostruka interakcija IAT-A i BPAQ\textsubscript{ukupno} 
+nije se pokazala prediktivnom za donošenje nekooperativnih odluka u
+eksperimentalnim igrama (H1d).
 
-Testirali smo i modele u koje smo uvrstili položaj igre u slijedu kao prediktor.
+U dodatnim analizama testirali smo i modele u 
+koje smo uvrstili položaj igre u slijedu kao prediktor.
 Za Igru vođe i Kukavice, uvođenje te varijable nije se pokazalo relevantnim. 
 Kod Dileme zatvorenika, pak, pokazalo se da je položaj igre u
 interakciji s IAT-A i BPAQ\textsubscript{ukupno}. U situaciji kad je
 Dilema zatvorenika bila prva po redu, najviša vjerojatnost donošenja
 nekooperativne odluke predviđena je za pojedince visoko na IAT-A i
-BPAQ\textsubscript{ukupno} (BPAQ-HA), te za one nisko na obje mjere. Prvi slučaj
-je u skladu s očekivanjima --- IAT-A i BPAQ\textsubscript{ukupno} (BPAQ-HA)
+BPAQ\textsubscript{ukupno}, te za one nisko na obje mjere. Prvi slučaj
+je u skladu s očekivanjima --- IAT-A i BPAQ\textsubscript{ukupno}
 djeluju sinergistički na povećanje vjerojatnosti nekooperativne odluke. Drugi
 slučaj nije očekivan, no valja uočiti da najviša predviđena vjerojatnost ovdje ne
 prelazi 40\% (u prvom slučaju prelazi 60\%) te da je moguće da razlike između
-različitih razina BPAQ\textsubscript{ukupno} (BPAQ-HA) na ovom dijelu spektra
+različitih razina BPAQ\textsubscript{ukupno} na ovom dijelu spektra
 IAT-A nisu statistički značajne.
 
 Od druge pozicije nadalje, obrazac se  mijenja te je najviša vjerojatnost
 predviđena za pojedince čiji su rezultati na IAT-A i BPAQ\textsubscript{ukupno}
-(BPAQ-HA) suprotnih smjerova. U obje situacije, predviđena vjerojatnost viša je
+suprotnih smjerova. U obje situacije, predviđena vjerojatnost viša je
 za one s višim rezultatom na IAT-A. Osim toga, kad je Dilema zatvorenika
 posljednja po redu, predviđene vjerojatnosti su više nego na ranijim pozicijama.
 
@@ -1471,7 +1305,7 @@ prikazane interakcije, no da je on vrlo vjerojatno prisutan.
 
 Uz ove aspekte interakcije koji su u skladu s Modelom, valja ukazati i na one
 koji to potencijalno nisu --- \emph{potencijalno}, jer Model u obzir ne uzima
-utjecaj situacijskih faktora, što ponašanje suigrača sigurno jest, a i ne bavi
+utjecaj situacijskih faktora, što ponašanje suigrača sigurno jest. Osim toga, ne bavi
 se odnosom profila ličnosti i ponašanja pojedinca u ponovljenim strateškim
 interakcijama, kakve su eksperimentalne igre korištene u ovom istraživanju.
 Primjerice, nije jasno zbog čega bi vjerojatnost donošenja nekooperativnih
@@ -1491,7 +1325,7 @@ moguće da to  \enquote{ublažava} sklonost samokritičnosti i dovodi do
 donošenja nekooperativnih odluka.
 
 Kao što je rečeno u Rezultatima, obrazac povezanosti ove trostruke interakcije s
-donošenjem nekooeprativnih odluka ponešto je neočekivan i nije ga lako
+donošenjem nekooperativnih odluka ponešto je neočekivan i nije ga lako
 interpretirati u potpunosti u skladu s dosadašnjim spoznajama. 
 Ipak, ispitivanja provedena s ciljem otklanjanja mogućnosti utjecaja
 multikolinearnosti ukazuju na to da ona ne bi trebala biti problem. 
@@ -1512,9 +1346,9 @@ suigrača u prethodnim igrama, pri predviđanju donošenja nekooperativne odluke
 drugoj i trećoj igri. Značajna interakcija nije pronađena za drugu igru, ali
 jest za treću. Ipak, ne radi se jednostavnoj dvostrukoj interakciji ponašanja
 suigrača i IAT-A, već o trostrukoj interakciji IAT-A, BPAQ\textsubscript{ukupno}
-(BPAQ-HA) i odluke suigrača. Stoga, odbacit ćemo i Hipotezu 2.
+i odluke suigrača. Stoga, odbacit ćemo i Hipotezu 2.
 Dok u slučaju prethodne nesuradnje postoje neke varijacije s
-obzirom na razinu IAT-A i BPAQ\textsubscript{ukupno} (BPAQ-HA), one nisu velike
+obzirom na razinu IAT-A i BPAQ\textsubscript{ukupno}, one nisu velike
 te je moguće da niti nisu statistički značajne. U slučaju prethodne suradnje, 
 visoka vjerojatnost nekooperativnog ponašanja predviđena je za sudionike s
 profilima nekongruentnog poricanja i nekongruentnog preuveličavanja. Takav
@@ -1545,7 +1379,7 @@ Ipak, valja napomenuti da se ovaj model pokazao manje robusnim u replikacijama.
 Odstupanja prosječnih koeficijenata od inicijalno procijenjenih veća su nego u
 modelu opisanom u prošlom dijelu. Osim toga, tek oko trećina repliciranih
 interakcija pokazala se statistički značajnima. Stoga, ovaj bi model valjalo
-uzeti s dozom opreza. 
+uzeti s većom dozom opreza. 
 
 \subsection{Teorijske i praktične implikacije}
 
@@ -1559,9 +1393,9 @@ osobinskih faktora (implicitne i eksplicitne ličnosti) te situacijskih faktora
 Neki aspekti testiranih modela logističke regresije potvrđuju pretpostavke
 Općeg modela prototipa ličnosti Binga i sur. \citeyearpar{bing2007integrating},
 a neki ne. Bilo bi deplasirano propitivati valjanost Modela na temelju ovog
-istraživanja, tim više što njihov Model razmatra samo međuodnos implicitne i
+istraživanja, tim više što Model razmatra samo međuodnos implicitne i
 eksplicitne komponente iste osobine ličnosti, ne uzimajući u obzir situacijske
-faktore, koji su se u ovom istraživanju
+faktore, koji su se u ovom, ali i prijašnjim istraživanjima
 pokazali važnima za predviđanje nekooperativnih odgovora. 
 Također, kao što je ranije spomenuto, moguće je da nepoklapanja proizlaze iz
 korištenja različitih pristupa mjerenju.
@@ -1618,7 +1452,7 @@ Cilj ovog istraživanja bio je proširiti postojeća znanja o bihevioralnoj teor
 igara i testu implicitnih asocijacija za agresivnost. Očekivali smo da će biti
 moguće predvidjeti donošenje nekooperativnih odluka u eksperimentalnim igrama na
 temelju implicitnih i eksplicitnih mjera, njihove međusobne interakcije te
-njihovih interakcija s ponašanjem suigrača. Hipoteze o prediktivnosti mjera te
+njihovih interakcija s ponašanjem suigrača. Hipoteze o prediktivnosti mjera i
 njihovih interakcija nisu potvrđene. 
 
 Dodatne analize --- koje su gledale trostruke
@@ -1627,7 +1461,7 @@ položajem igre u slijedu --- ukazuju na to da je međuodnos tih varijabli pri
 predviđanju nekooperativnih odluka u eksperimentalnim igrama složeniji od
 očekivanog. Naime, trostruka interakcija implicitne i eksplicitne mjere
 s položajem igre u slijedu pokazala se značajnim prediktorom donošenja
-nekoooperativne odluke u Dilemi zatvorenika. Osim toga, trostruka interakcija
+nekooperativne odluke u Dilemi zatvorenika. Osim toga, trostruka interakcija
 dviju korištenih mjera s ponašanjem suigrača pokazala se prediktivnom za
 donošenje nekooperativnih odluka u trećoj igri po redu. 
 
@@ -1637,6 +1471,25 @@ efekata, ukoliko su oni slabiji. Unatoč tome, ovi rezultati mogu poslužiti kao
 grub putokaz za daljnja istraživanja na području implicitne ličnosti i
 bihevioralne teorije igara.
 
+\section{Zahvala}
+
+Prvenstveno, želim zahvaliti svom mentoru Zvonimiru Galiću na vodstvu i podršci
+koje je pružao prilikom izrade ovog rada. Želim zahvaliti i doktorandu Mitji
+Ružojčiću, koji je uvijek bio dostupan za savjete i pitanja te pomagao oko
+organiziranja tehničkih dijelova --- zbilja je bio izvrstan.
+Želim zahvaliti Ivoni Eterović i Ozrenu Šiftaru jer su bili voljni
+razgovarati o idejama koje su mi padale na pamet, što mi je uvelike
+pomoglo pri definiranju ovog istraživanja. Zahvaljujem i Ivani Baran te, još
+jednom, Ozrenu jer su preuzeli uloge procjenjivača pri provjeri
+uspješnosti obmane. Ozrenu zahvaljujem i na ideji za način
+ispitivanja uspješnosti obmane. Želim zahvaliti svojoj obitelji jer
+mi je omogućila neopterećeno provođenje studentskih dana. Na kraju,
+zahvaljujem svima koji su sudjelovali u mom istraživanju, kao i onima
+koji su regrutirali sudionike. Kako ovaj popis nije potpun, a
+njegovo upotpunjavanje zahtijevalo bi dokument od barem ovoliko
+stranica, ukratko ću zahvaliti svima koji su imali ikakav pozitivan utjecaj na moj
+život i obrazovanje.
+
 \makeatletter
 \addtocontents{toc}{\let\protect\l@chapter\protect\l@section}
 \makeatother
@@ -1644,7 +1497,7 @@ bihevioralne teorije igara.
 
 \subsection{Scenariji eksperimentalnih igara}
 
-Scenarij Dileme zatvorenika\footnote{U tekstovima u programu nedostaju dijaktrički
+Scenarij Dileme zatvorenika\footnote{U tekstovima u programu nedostaju dijakritički
     znakovi jer nisu mogli biti adekvatno prikazani.}: 
 \begin{quote}
 Zamislite da se nalazite u sobi za ispitivanje u jednoj policijskoj postaji.  
@@ -1758,6 +1611,184 @@ za Igru vođe.
     & čeka & uključili ste se u promet & oboje ste ostali stajati\\
 	\bottomrule[1pt]
 \end{tabular}
+\end{table}
+
+\clearpage
+\subsection{Dodatne analize}
+
+\vspace*{\fill}
+\begin{table}[h]
+    \begin{center}
+        \caption{\label{glmtotposP} Model logističke regresije s trostrukom interakcijom IAT-A,
+            BPAQ\textsubscript{ukupno} i položajem Dileme zatvorenika u slijedu
+            igara kao prediktorom
+            nekooperativne odluke u Dilemi zatvorenika. 
+            Za puni model: $\chi^2 =$ 9.274, $df =$ 7, $p =$ 0.23, $N
+            =$ 102.}
+        \hspace*{-0.7cm}\begin{tabular}{llrrrr}
+        \toprule
+        Model & Prediktor & $B$ & $SE$ & $z$ & OR (95\% CI)\\
+        \midrule
+        I & konstanta* & -1.923 & 0.690 & -2.787 &\\
+        \multirow{3}{*}{$R^2_N =$ 0.02}
+        &BPAQ\textsubscript{ukupno} & -0.066 & 0.296 & -0.221 &\\
+        &IAT-A & -0.118 & 0.723 & 0.163 &\\
+        &gameposP & 0.346 & 0.318 & 1.090  &\\
+        &&&&&\\ 
+        II & konstanta & -1.912 & 0.710 & -2.693 &\\
+        \multirow{6}{*}{$R^2_N =$ 0.05}
+        &BPAQ\textsubscript{ukupno} & 0.652 & 0.858 & 0.760 &\\
+        &IAT-A & 0.652 & 2.118 & 0.308 &\\
+        &gameposP & 0.303 & 0.329 & 0.922 &\\
+        &BPAQ\textsubscript{ukupno} x IAT-A & -1.258 & 1.109 & -1.135 &\\
+        &BPAQ\textsubscript{ukupno} x gameposP & -0.376 & 0.402 & -0.935 &\\
+        &gameposP x IAT-A & -0.244 & 0.999 & -0.244 &\\
+        &&&&&\\ 
+        III & konstanta & -1.901 & 0.749 & -2.538 &\\
+        \multirow{7}{*}{$R^2_N =$ 0.13}
+        &BPAQ\textsubscript{ukupno} & 0.636 & 0.872 & 0.729 & \\
+        &IAT-A & -0.296 & 2.320 & -0.128 &\\
+        &gameposP & 0.211 & 0.364 & 0.579  &\\
+        &BPAQ\textsubscript{ukupno} x IAT-A$^\ddagger$ & 5.799 & 3.198 & 1.813 &
+        329.83 (0.751, 2.5 x 10\textsuperscript{5})\\
+        &BPAQ\textsubscript{ukupno} x gameposP & -0.448 & 0.422 & -1.062 &\\
+        &gameposP x IAT-A & 0.087 & 1.156 & 0.075 &\\
+        & BPAQ\textsubscript{ukupno} x IAT-A x gameposP* & -3.815 &
+        1.679 & -2.272 & 0.022 (0.001, 0.485)\\
+        \bottomrule
+        \multicolumn{6}{l}{
+            \parbox{9cm}{\scriptsize \vspace{3pt} 
+                * p < 0.05\\
+                $\ddagger$ p < 0.07\\
+                gameposP = položaj Dileme zatvorenika u slijedu igara
+        }}
+    \end{tabular}
+\end{center}
+\end{table}
+\vspace*{\fill}
+\clearpage
+
+\begin{figure}
+    \begin{center}
+        \caption{\label{glmtotposPplot} Prikaz trostruke interakcije IAT-A,
+            BPAQ\textsubscript{ukupno} i položaja igre kao prediktora
+            nekooperativnog ponašanja u Dilemi zatvorenika. Kontinuirane
+            varijable centrirane su na nulu (N = 102).}
+        \includegraphics[keepaspectratio, width =
+        \textwidth]{"/home/denis/Documents/Diplomski/diplomska radnja/diplomski.tex/glmagtotposp"}
+    \end{center}
+\end{figure}
+
+\begin{table}
+    \begin{center}
+        \caption{\label{deskr p robust} Deskriptivni podaci replikacije punog
+            modela s IAT-A, BPAQ\textsubscript{ukupno} i položajem Dileme
+            zatvorenika kao prediktorima nekooperativnih odluka u Dilemi
+            zatvorenika ($k =$ 1000).}
+        \hspace*{-0.8cm}\begin{tabular}{lrrrrrrr}
+        \toprule
+        Prediktor & $M_B$ & $SD_B$ & $med_B$ & $IQR_B$ & $M_{SE}$ & $med_{SE}$
+        & $\% p < 0.06$\\
+        \midrule
+        BPAQ\textsubscript{ukupno}$^\ddagger$ & 3.15 & 0.78 & 3.08 & 2.81 -- 3.43 &
+        1.77 & 1.71 & 40.7\\
+       IAT-A & -0.33 & 0.71 & -0.32 & -0.75 -- 0.07 & 2.50 & 2.47 & 0.0\\
+       gameposP & 0.26 & 0.20 & 0.25 & 0.14 -- 0.36 & 0.72 & 0.70 & 0.0\\
+       BPAQ\textsubscript{ukupno} x IAT-A$^\ddagger$ & 5.92 & 1.33 & 5.76 & 5.21 -- 6.52 &
+        3.46 & 3.38 & 27.1\\
+        BPAQ\textsubscript{ukupno} x gameposP* & -2.10 & 0.46 & -2.02 &
+        -2.20 -- {-}1.88 & 0.96 & 0.92 & 89.2\\
+       gameposP x IAT-A & 0.13 & 0.36 & 0.12 & -0.10 -- 0.31 & 1.25 & 1.22 & 0.0\\
+       BPAQ\textsubscript{ukupno} x IAT-A x gameposP* & -3.88 & 0.76 & -3.76 &
+        -4.15 -- {-}3.45 & 1.82 & 1.77 & 83.5\\
+        \bottomrule
+        \multicolumn{6}{l}{
+            \parbox{9cm}{\scriptsize \vspace{3pt} 
+                * p < 0.05\\
+                $\ddagger$ p < 0.07\\
+                gameposP = položaj Dileme zatvorenika u slijedu igara
+        }}
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}
+    \begin{center}
+        \caption{\label{glmtotgam3} Model logističke regresije s trostrukom interakcijom IAT-A,
+            BPAQ\textsubscript{ukupno} i ponašanja suigrača kao prediktorom
+            nekooperativne odluke u trećoj igri po redu. Prikazan je samo posljednji korak
+            jer su raniji koraci prikazani u Tablici \ref{glmtotgam33}. Za puni
+            model: $\chi^2 =$
+            11.535, $df =$ 7, $p =$ 0.12, $N =$ 102.}
+        \hspace*{-0.5cm}\begin{tabular}{llrrrr}
+        \toprule
+        Model & Prediktor & $B$ & $SE$ & $z$ & OR (95\% CI)\\
+        \midrule
+        III & konstanta* & -1.569 & 0.426 & -3.687 &\\
+        \multirow{7}{*}{$R^2_N =$ 0.15}
+        &BPAQ\textsubscript{ukupno} & -0.091 & 0.512 & -0.179 & \\
+        &IAT-A & -0.622 & 1.387 & -0.448 &\\
+        &botdec* & 1.101 & 0.518 & 2.128 & 3.006 (1.144, 9.083)\\
+        &BPAQ\textsubscript{ukupno} x IAT-A* & -5.371 & 2.512 & -2.138 & 0.005
+        (1.42 x 10\textsuperscript{-5}, 0.370) \\
+        &BPAQ\textsubscript{ukupno} x botdec & -0.252 & 0.632 & -0.398 &\\
+        &botdec x IAT-A & 0.707 & 1.703 & 0.415 &\\
+        & BPAQ\textsubscript{ukupno} x IAT-A x botdec$^\ddagger$ & 5.112 & 2.804
+        & 1.823 & 165.94 (1.019, 8328.1) \\
+        \bottomrule
+        \multicolumn{5}{l}{
+            \parbox{3cm}{\scriptsize \vspace{3pt} 
+                * p < 0.05\\
+                $\ddagger$  p < 0.07\\
+                botdec = odluka suigrača
+        }}
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{figure}
+    \begin{center}
+        \caption{\label{glmtotgam3plot} Prikaz trostruke interakcije IAT-A,
+            BPAQ\textsubscript{ukupno} i ponašanja suigrača kao prediktora
+            nekooperativnog ponašanja u trećoj igri po redu. Kontinuirane
+            varijable centrirane su na nulu (N = 102).}
+        \includegraphics[keepaspectratio, width =
+        \textwidth]{"/home/denis/Documents/Diplomski/diplomska
+            radnja/diplomski.tex/glmtot3"}
+    \end{center}
+\end{figure}
+
+\begin{table}
+    \begin{center}
+        \caption{\label{deskr gam3 robust} Deskriptivni podaci replikacije punog
+            modela s IAT-A, BPAQ\textsubscript{ukupno} i ponašanjem suigrača u
+            prethodnim igrama kao prediktorima nekooperativnih odluka u trećoj 
+            igri po redu ($k =$ 1000).}
+        \hspace*{-0.8cm}\begin{tabular}{lrrrrrrr}
+        \toprule
+        Prediktor & $M_B$ & $SD_B$ & $med_B$ & $IQR_B$ & $M_{SE}$ & $med_{SE}$
+        & $\% p < 0.07$\\
+        \midrule
+        BPAQ\textsubscript{ukupno}* & -2.61 & 1.18 & -2.26 & -2.52 -- -2.08 &
+        1.34 & 1.20 & 65.9\\
+       IAT-A & -0.81 & 1.32 & -0.53 & -0.77 -- -0.22& 1.54 & 1.41 & 02.1\\
+       botdec & 1.56 & 0.89 & 1.33 & 1.13 -- 1.55 & 1.06 & 0.97 & 12.3\\
+       BPAQ\textsubscript{ukupno} x IAT-A* & -5.77 & 2.30 & -5.16 & -5.85 --
+       -4.74& 2.84 & 2.60 & 65.9\\
+       BPAQ\textsubscript{ukupno} x botdec & 2.13 & 1.25 & 1.86 &
+        1.57 -- 2.22 & 1.57 & 1.44 & 10.3\\
+       botdec x IAT-A & 0.90 & 1.40 & 0.57 & 0.19 -- 1.05& 1.89 & 1.78 & 01.7\\
+       BPAQ\textsubscript{ukupno} x IAT-A x botdec$^\ddagger$ & 5.48 & 2.39 & 4.94 &
+        4.32 -- 5.82& 3.16 & 2.94 & 38.0\\
+        \bottomrule
+        \multicolumn{5}{l}{
+            \parbox{3cm}{\scriptsize \vspace{3pt} 
+                * p < 0.05\\
+                $\ddagger$  p < 0.07\\
+                botdec = odluka suigrača
+        }}
+    \end{tabular}
+\end{center}
 \end{table}
 
 \end{appendices}
