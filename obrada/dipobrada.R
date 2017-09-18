@@ -700,8 +700,10 @@ plotko <- ggplot(data = tmpy, mapping = aes(x = iatcent, y = pred,
         facet_grid(~gameposp) + ggtitle('Položaj igre') +
         xlab('IAT-A') + ylab('Vjerojatnost nekooperativne odluke') + 
         theme(axis.text.x = element_text(size = 11), axis.text.y = element_text(size = 11),
-        axis.title.y = element_text(size = 11, vjust = 2), axis.title.x = element_text(size = 11),
-        plot.title = element_text(size = 11, hjust = 0.5)) +
+        axis.title.y = element_text(size = 14, vjust = 2), axis.title.x = element_text(size = 14),
+        plot.title = element_text(size = 14, hjust = 0.5), strip.text.x = element_text(size = 14),
+        panel.grid.major.x = element_line(color = '#C1CAC5'), panel.grid.minor.x = element_line(colour = '#CBD5D0'),
+        legend.text = element_text(size = 12)) +
         guides(color = guide_legend(title = 'BPAQ_ukupno')) + 
         scale_color_manual(values = c('1' = crvena, '0' = zelena, '-1' = plava))
 plotko
@@ -713,16 +715,16 @@ ggsave(plotko,
        device = cairo_pdf, height = 28, width = 36, unit = 'cm')
 
 
-fit <- glm(data = rezmat, formula = PDdec_rec ~ agpercent + iatcent + gameposp, family = binomial)
+fit <- glm(data = rezmat, formula = PDdec_rec ~ agtotcent + iatcent + gameposp, family = binomial)
 summary(fit) #ns
 
-fit <- glm(data = rezmat, formula = PDdec_rec ~ agpercent + iatcent + gameposp +
-           iatcent : gameposp + iatcent : agpercent + agpercent : gameposp, family = binomial)
+fit <- glm(data = rezmat, formula = PDdec_rec ~ agtotcent + iatcent + gameposp +
+           iatcent : gameposp + iatcent : agtotcent + agtotcent : gameposp, family = binomial)
 summary(fit) #ns
 
-fit <- glm(data = rezmat, formula = PDdec_rec ~ agpercent + iatcent + gameposp +
-           iatcent : gameposp + iatcent : agpercent + agpercent : gameposp +
-           iatcent : agpercent : gameposp, family = binomial)
+fit <- glm(data = rezmat, formula = PDdec_rec ~ agtotcent + iatcent + gameposp +
+           iatcent : gameposp + iatcent : agtotcent + agtotcent : gameposp +
+           iatcent : agtotcent : gameposp, family = binomial)
 summary(fit) #!!! supresor?
 
 set.seed(31951)
@@ -859,6 +861,7 @@ polycor::polyserial(x = rezmat$iatcent, y = as.factor(rezmat$botdec_rec), std.er
 
 tmpy <- expand.grid(agtotcent = c(-1, 0, 1), botdec_rec = rezmat$botdec_rec, 
                     iatcent = rezmat$iatcent)
+tmpy$pred <- predict(fit, newdata = tmpy, type = 'response')
 
 plotko_laballer <- c('0' = 'suradnja', '1' = 'nesuradnja')
 plotko <- ggplot(data = tmpy, mapping = aes(x = iatcent, y = pred,
@@ -867,8 +870,10 @@ plotko <- ggplot(data = tmpy, mapping = aes(x = iatcent, y = pred,
     ggtitle('Prethodne odluke suigrača') + 
     xlab('IAT-A') + ylab('Vjerojatnost nekooperativne odluke') + 
     theme(axis.text.x = element_text(size = 11), axis.text.y = element_text(size = 11),
-    axis.title.y = element_text(size = 11, vjust = 2), axis.title.x = element_text(size = 11),
-    plot.title = element_text(size = 11, hjust = 0.5)) +
+    axis.title.y = element_text(size = 14, vjust = 2), axis.title.x = element_text(size = 14),
+    plot.title = element_text(size = 14, hjust = 0.5), strip.text.x = element_text(size = 14),
+    panel.grid.major.x = element_line(color = '#C1CAC5'), panel.grid.minor.x = element_line(colour = '#CBD5D0'),
+    legend.text = element_text(size = 12)) +
     guides(color = guide_legend(title = 'BAQ_ukupno')) +
     scale_color_manual(values = c('1' = crvena, '0' = zelena, '-1' = plava))
 plotko
